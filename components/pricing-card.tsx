@@ -55,73 +55,73 @@ export function PricingCard({ plan, currentPlan, name, email }: PricingCardProps
     }
   };
 
-  const handlePayment = async () => {
-    setIsProcessing(true);
+  // const handlePayment = async () => {
+  //   setIsProcessing(true);
 
-    try {
-      const response = await axios.post("/api/create-order", {
-        amount: convertedPrice * 100, // Convert to smallest currency unit
-        currency: currency,
-      });
+  //   try {
+  //     const response = await axios.post("/api/create-order", {
+  //       amount: convertedPrice * 100, // Convert to smallest currency unit
+  //       currency: currency,
+  //     });
 
-      const orderId = response.data.orderId;
+  //     const orderId = response.data.orderId;
 
-      //@ts-expect-error: razorpay error
-      if (!window.Razorpay) {
-        console.error("Razorpay SDK not loaded");
-        setIsProcessing(false);
-        return;
-      }
+  //     //@ts-expect-error: razorpay error
+  //     if (!window.Razorpay) {
+  //       console.error("Razorpay SDK not loaded");
+  //       setIsProcessing(false);
+  //       return;
+  //     }
 
-      const options = {
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        amount: convertedPrice * 100,
-        currency: currency,
-        name: "Insta_Transcribe",
-        description: `Upgrade Plan to ${plan.name}`,
-        order_id: orderId,
-        //@ts-expect-error: razorpay error
-        handler: async function (response) {
-          console.log("Payment successful:", response);
-          toast.success("Payment Successful");
+  //     const options = {
+  //       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+  //       amount: convertedPrice * 100,
+  //       currency: currency,
+  //       name: "Insta_Transcribe",
+  //       description: `Upgrade Plan to ${plan.name}`,
+  //       order_id: orderId,
+  //       //@ts-expect-error: razorpay error
+  //       handler: async function (response) {
+  //         console.log("Payment successful:", response);
+  //         toast.success("Payment Successful");
   
-          try {
-            const result = await updatePlan(email, plan.name as Plan); 
-            if (result) {
-              toast.success("Plan updated successfully!");
-            } else {
-              toast.error("Failed to update the plan.");
-            }
-          } catch (error) {
-            console.error("Error updating plan:", error);
-            toast.error("Failed to update the plan. Please contact support.");
-          }
-        },
-        prefill: {
-          name: name,
-          email: email,
-        },
-        theme: {
-          color: "#3399cc",
-        },
-      };
+  //         try {
+  //           const result = await updatePlan(email, plan.name as Plan); 
+  //           if (result) {
+  //             toast.success("Plan updated successfully!");
+  //           } else {
+  //             toast.error("Failed to update the plan.");
+  //           }
+  //         } catch (error) {
+  //           console.error("Error updating plan:", error);
+  //           toast.error("Failed to update the plan. Please contact support.");
+  //         }
+  //       },
+  //       prefill: {
+  //         name: name,
+  //         email: email,
+  //       },
+  //       theme: {
+  //         color: "#3399cc",
+  //       },
+  //     };
 
-      //@ts-expect-error: razor pay erorr
-      const rzpi1 = new window.Razorpay(options);
-      //@ts-expect-error: response type
-      rzpi1.on("payment.failed", function (response) {
+  //     //@ts-expect-error: razor pay erorr
+  //     const rzpi1 = new window.Razorpay(options);
+  //     //@ts-expect-error: response type
+  //     rzpi1.on("payment.failed", function (response) {
         
-        console.error("Payment failed:", response.error);
-        toast.error("Payment Failed: " + response.error.description);
-      });
-      rzpi1.open();
-    } catch (error) {
-      console.error("Something went wrong: PRICING_CARD", error);
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setIsProcessing(false);
-    }
-  };
+  //       console.error("Payment failed:", response.error);
+  //       toast.error("Payment Failed: " + response.error.description);
+  //     });
+  //     rzpi1.open();
+  //   } catch (error) {
+  //     console.error("Something went wrong: PRICING_CARD", error);
+  //     toast.error("Something went wrong. Please try again.");
+  //   } finally {
+  //     setIsProcessing(false);
+  //   }
+  // };
 
   useEffect(() => {
     convertCurrency(currency);
@@ -176,7 +176,7 @@ export function PricingCard({ plan, currentPlan, name, email }: PricingCardProps
       </ul>
       <div className="mt-auto">
         <Button
-          onClick={handlePayment}
+          // onClick={handlePayment}
           disabled={isProcessing || currentPlan === plan.name}
           className={cn(
             "mt-8 w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors",

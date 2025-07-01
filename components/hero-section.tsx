@@ -1,3 +1,5 @@
+import React from "react";
+import { Cover } from "@/components/ui/cover";
 const HeroSection = () => {
     return (
       <div className="relative text-center h-[300px] sm:h-[200px] flex flex-col justify-center items-center">
