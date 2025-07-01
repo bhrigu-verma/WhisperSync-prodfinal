@@ -1,5 +1,9 @@
 import React from "react";
 import { Cover } from "@/components/ui/cover";
+
+import { FlipWords } from "@/components/ui/flip-words";
+const words = ["creators", "editors", "storytellers", "influencers", "podcasters", "vloggers", "YouTubers", "marketers", "filmmakers", "course creators", "educators", "caption artists", "social managers", "interviewers", "reel makers", "brand builders"];
+
 const HeroSection = () => {
     return (
       <div className="relative text-center h-[300px] sm:h-[200px] flex flex-col justify-center items-center">
@@ -12,9 +16,7 @@ const HeroSection = () => {
         Turn Speech into Storytelling.<br /> at <Cover className="text-yellow-400">WhisperSync</Cover>
          </h1>
         <p className="text-base sm:text-lg text-gray-100 max-w-2xl mb-16 mx-auto  m-6 font-medium leading-loose p-5">
-          Upload your short-form videos and receive precise transcriptions in
-          minutes. Built for content creators, editors, and social media
-          managers.
+         Upload your reels and shorts — get crisp, synced captions in seconds. Designed for<FlipWords words={words} />." 
         </p>
       </div>
     );

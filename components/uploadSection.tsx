@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import useLoadingStore from "@/store/loading-store";
 import { StoreTranscription } from "@/actions/StoreTranscriptionFile";
 import useModalStore from "@/store/modal-store";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 
 
@@ -102,36 +103,31 @@ const UploadSection = () => {
     
 
   return (
-    <div className="relative max-w-3xl mx-auto mt-8">
-      <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed border-yellow-600 rounded-lg cursor-pointer bg-gradient-to-br from-sand-500 via-orange-300 to-yellow-400 hover:scale-105 hover:bg-opacity-90 shadow-xl transition-all duration-300 transform hover:rotate-2">
-        <div className="flex flex-col items-center justify-center pt-6 pb-8 space-y-3">
-          <UploadCloud className="w-16 h-16 text-white mb-4 animate-pulse" />
-          <p className="text-lg font-semibold text-white drop-shadow-md">
-            <span className="underline">Click to upload</span> or drag and drop
-          </p>
-          <p className="text-xs text-white opacity-90">
-            MP4 up to 500MB
-          </p>
-        </div>
-        <input
-          type="file"
-          className="hidden"
-          accept="video/*"
-          onChange={upload}
-        />
-      </label>
-      <div className="mt-4 text-center text-sm text-gray-400">
-        By uploading, you agree to our{" "}
-        <a href="/terms" className="text-indigo-300 underline">
-          Terms
-        </a>{" "}
-        and{" "}
-        <a href="/privacy" className="text-indigo-300 underline">
-          Privacy Policy
-        </a>
-        .
+  
+  <div className="relative max-w-3xl mx-auto mt-8">
+  <CardSpotlight className="h-96 w-96">
+    <label className="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-gradient-to-br from-sand-500 via-orange-300 to-yellow-400 hover:scale-105 hover:bg-opacity-90 shadow-xl transition-all duration-300 transform hover:rotate-2">
+      <div className="flex flex-col items-center justify-center pt-6 pb-8 space-y-3">
+        <UploadCloud className="w-16 h-16 text-white mb-4 animate-pulse" />
+        <p className="text-lg font-semibold text-white drop-shadow-md">
+          <span className="underline">Click to upload</span> or drag and drop
+        </p>
+        <p className="text-xs text-white opacity-90">
+          MP4 up to 500MB
+        </p>
       </div>
-    </div>
+      <input
+        type="file"
+        className="hidden"
+        accept="video/*"
+        onChange={upload}
+      />
+    </label>
+  </CardSpotlight>
+  
+</div>
+
+    
   );
 };
 
