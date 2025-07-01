@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card"
 import { signIn } from "next-auth/react"
 import Link from "next/link"
+import Image from "next/image"
 
 const  SignUp = () => {
   return (
@@ -30,7 +31,10 @@ const  SignUp = () => {
                   variant="default" 
                   className="w-full"
                 >
-                  <img src="/google.svg" alt="" className="h-6 w-6" />
+                  
+                  
+                  <Image src="/google.svg" alt="" className="h-6 w-6" />
+                  
                   Login with Google
                 </Button>
             </div>

@@ -13,6 +13,7 @@ import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { UserLogo, LogoIcon } from "@/components/userLogo";
+import Image from "next/image";
 
 const UserRoutesLayout = ({ children }: { children: React.ReactNode }) => {
   const links = [
@@ -120,13 +121,17 @@ const UserRoutesLayout = ({ children }: { children: React.ReactNode }) => {
                 label: `${session?.user?.name}`,
                 href: "#",
                 icon: (
-                  <img
-                    src={session?.user?.image || undefined}
+                 
+                  
+                  <Image
+                    src={session?.user?.image || "/default-avatar.png"}
                     className="h-7 w-7 flex-shrink-0 rounded-full"
                     width={50}
                     height={50}
                     alt="Avatar"
                   />
+
+
                 ),
               }}
             />

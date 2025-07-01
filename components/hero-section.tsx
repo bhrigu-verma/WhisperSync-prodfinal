@@ -16,8 +16,9 @@ const HeroSection = () => {
         Turn Speech into Storytelling.<br /> at <Cover className="text-yellow-400">WhisperSync</Cover>
          </h1>
         <p className="text-base sm:text-lg text-gray-100 max-w-2xl mb-16 mx-auto  m-6 font-medium leading-loose p-5">
-         Upload your reels and shorts — get crisp, synced captions in seconds. Designed for<FlipWords words={words} />." 
-        </p>
+  Upload your reels and shorts — get crisp, synced captions in seconds. Designed for <FlipWords words={words} />&quot;
+</p>
+
       </div>
     );
   };

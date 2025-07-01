@@ -7,24 +7,20 @@ import { Button } from "./ui/button";
 import toast from "react-hot-toast";
 
 import { cn } from "@/lib/utils";
-import { updatePlan } from "@/actions/updatePlan";
-import { Plan } from "@prisma/client";
+
 
 interface PricingPlan {
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
   name: string;
   price: string; // Price in USD by default
   features: string[];
   popular?: boolean;
 }
-
 interface PricingCardProps {
   plan: PricingPlan;
   currentPlan: string;
-  name: string;
-  email: string;
 }
-
-export function PricingCard({ plan, currentPlan, name, email }: PricingCardProps) {
+export function PricingCard({ plan, currentPlan}: PricingCardProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const [currency, setCurrency] = useState<keyof typeof currencyMap>("USD");
   const [convertedPrice, setConvertedPrice] = useState(parseFloat(plan.price)); // Start with USD price

@@ -21,7 +21,7 @@ const TranscriptionTable = ({ transcriptiondata }: TranscriptionTableProps) => {
     setLoading(false);
     setLoadingType("Loading")
     setTranscriptions(transcriptiondata);
-  }, []);
+  }, [setLoading, setLoadingType, setTranscriptions,transcriptiondata]);
 
   //@ts-expect-error: type event
   const updateTranscription = (index: number, property: string, ev) => {

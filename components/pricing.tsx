@@ -54,7 +54,7 @@ const Pricing = () => {
             <PricingCard
               //@ts-expect-error: name type
               name={session?.user?.name }
-              //@ts-expect-error: email type
+             
               email={session?.user?.email}
               currentPlan={currentPlan}
               key={plan.name}

@@ -42,7 +42,7 @@ const TranscriptVideo = ({
         //@ts-expect-error: video ref type
         videoRef.current.src = videoUrl;
         load()
-    },[])
+    },[videoUrl])
     
     function toFFmpegColor(rgb: string) {
         const bgr = rgb.slice(5,7) + rgb.slice(3,5) + rgb.slice(1,3);
