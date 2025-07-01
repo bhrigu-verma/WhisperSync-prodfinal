@@ -31,15 +31,15 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  { Icon: Github, href: '#', label: 'GitHub' },
-  { Icon: Twitter, href: '#', label: 'Twitter' },
-  { Icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { Icon: Github, href: 'https://github.com/bhrigu-verma', label: 'GitHub' },
+  { Icon: Twitter, href: 'https://twitter.com/shareesharee73', label: 'Twitter' },
+  { Icon: Linkedin, href: 'https://www.linkedin.com/in/bhrigu-verma-89090a273/', label: 'LinkedIn' },
 ];
 
 const contactInfo = [
-  { Icon: Mail, text: 'hello@snapscript.ai' },
-  { Icon: Phone, text: '+1 (555) 123-4567' },
-  { Icon: MapPin, text: 'San Francisco, CA' },
+  { Icon: Mail, text: 'bhriguverma11@gmail.com' },
+  { Icon: Phone, text: '+91 9478335331' },
+  { Icon: MapPin, text: 'INDIA' },
 ];
 
 const Footer = () => {
@@ -146,7 +146,7 @@ const Footer = () => {
                 <div className="border-t border-white/10 py-8">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} SnapScript. All rights reserved. Made with ❤️ in San Francisco.
+                            © {new Date().getFullYear()} SYNCSCRIPT. All rights reserved. Made with ❤️ in INDIA.
                         </p>
                         
                         <div className="flex items-center space-x-6 text-sm text-gray-400">
