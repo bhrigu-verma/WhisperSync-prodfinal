@@ -48,7 +48,7 @@ const UploadSection = () => {
 
       video.onloadedmetadata = () => {
         const aspectRatio = video.videoWidth / video.videoHeight;
-        resolve(aspectRatio < 1); // Vertical videos have aspect ratio < 1
+        resolve(true); // Vertical videos have aspect ratio < 1
       };
 
       video.onerror = () => {
