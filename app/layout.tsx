@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Insta Transcribe",
+  title: "WhisperSync",
   description: "Transcribe you videos within seconds",
 };
 

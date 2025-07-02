@@ -102,9 +102,9 @@ const Header = () => {
                   <div className="px-6 py-4 border-t border-gray-800">
                     <p className="text-sm text-gray-500">
                       © {new Date().getFullYear()}{" "}
-                      <span className="text-md font-bold text-white">
-                        Insta<span className="text-indigo-500">Transcribe</span>
-                      </span>
+                      <span className="text-xl font-extrabold bg-gradient-to-tr from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
+        WHISPRSYNC
+      </span>
                     </p>
                   </div>
                 </div>
