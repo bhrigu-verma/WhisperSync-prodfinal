@@ -40,7 +40,7 @@ const  SignUp = () => {
             </div>
             <div className="mt-4 text-center text-sm">
               Go back to {" "}
-              <Link href="/" className="underline underline-offset-4">
+              <Link href="/" className="underline underline-offset-4"
                 Homepage
               </Link>
             </div>
