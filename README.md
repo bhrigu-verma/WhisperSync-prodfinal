@@ -6,7 +6,7 @@
 <h3 align="center"><em>Your Voice, Subtly Synced.</em></h3>
 
 ---
-
+>whisperSync is live access and use it https://whispersyncbhrigu.netlify.app/
 > WhisperSync is an AI-powered tool that transforms short-form videos into beautifully captioned content — automatically syncing transcriptions with the audio down to the millisecond.
 
 ## 🌟 Why WhisperSync?
