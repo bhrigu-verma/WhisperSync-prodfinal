@@ -23,7 +23,7 @@ const  SignUp = () => {
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
-        {/* </CardHeader>
+        </CardHeader>
         <CardContent> 
             <div className="flex flex-col gap-y-4 mt-4">
               <Button 
@@ -36,7 +36,7 @@ const  SignUp = () => {
                   <Image src="/google.svg" alt="" className="h-6 w-6" />
                   
                   Login with Google
-                </Button> */}
+                </Button>
             </div>
             <div className="mt-4 text-center text-sm">
               Go back to {" "}
