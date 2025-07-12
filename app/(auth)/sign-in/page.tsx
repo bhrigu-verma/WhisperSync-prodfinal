@@ -33,7 +33,8 @@ const  SignUp = () => {
                 >
                   
                   
-                  <Image src="/google.svg" alt="" className="h-6 w-6" />
+                  <Image src="/google.svg" alt="" width={24} height={24} />
+
                   
                   Login with Google
                 </Button>
