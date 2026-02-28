@@ -40,6 +40,12 @@ const Header = () => {
               </Link>
             )}
             <button
+              onClick={() => scrollToSection("features")}
+              className="hidden sm:inline-block text-gray-300 hover:text-white font-medium transition duration-300"
+            >
+              Features
+            </button>
+            <button
               onClick={() => scrollToSection("pricing")}
               className="hidden sm:inline-block text-gray-300 hover:text-white font-medium transition duration-300"
             >
@@ -91,8 +97,14 @@ const Header = () => {
                         </Link>
                       )}
                       <button
+                        onClick={() => scrollToSection("features")}
+                        className="block w-full text-left text-sm font-semibold text-gray-300 hover:bg-[#1C1C1C] rounded-lg px-4 py-2 transition"
+                      >
+                        Features
+                      </button>
+                      <button
                         onClick={() => scrollToSection("pricing")}
-                        className="block text-sm font-semibold text-gray-300 hover:bg-[#1C1C1C] rounded-lg px-4 py-2 transition"
+                        className="block w-full text-left text-sm font-semibold text-gray-300 hover:bg-[#1C1C1C] rounded-lg px-4 py-2 transition"
                       >
                         Pricing
                       </button>

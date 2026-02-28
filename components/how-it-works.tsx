@@ -13,11 +13,14 @@ const TimelineDemo = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section id="how-it-works" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Showcasing the product timeline
+          <p className="text-sm font-semibold uppercase tracking-widest text-yellow-400 mb-3">
+            How it works
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            From upload to captioned video in minutes
           </h2>
         </div>
         <div className="grid grid-cols-8">
