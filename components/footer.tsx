@@ -10,17 +10,15 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { href: '#', label: 'About Us' },
-  { href: '#', label: 'Blog' },
-  { href: '#', label: 'Careers' },
-  { href: '#', label: 'Press Kit' },
+  { href: 'https://github.com/bhrigu-verma', label: 'About Us' },
+  { href: 'https://github.com/bhrigu-verma/WhisperSync-prodfinal', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/bhrigu-verma-89090a273/', label: 'Careers' },
 ];
 
 const supportLinks = [
-  { href: '#', label: 'Help Center' },
-  { href: '#', label: 'Contact Support' },
-  { href: '#', label: 'API Documentation' },
-  { href: '#', label: 'System Status' },
+  { href: 'mailto:bhriguverma11@gmail.com', label: 'Contact Support' },
+  { href: 'https://github.com/bhrigu-verma/WhisperSync-prodfinal/issues', label: 'Report Issue' },
+  { href: '#pricing', label: 'Pricing' },
 ];
 
 const legalLinks = [
@@ -128,15 +126,15 @@ const Footer = () => {
                         <div className="flex items-center space-x-6 text-gray-400 text-sm">
                             <div className="flex items-center space-x-2">
                                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                <span>99.9% Uptime</span>
+                                <span>All Systems Operational</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                <span>SOC 2 Compliant</span>
+                                <span>Open Source</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                                <span>GDPR Ready</span>
+                                <span>Made in India</span>
                             </div>
                         </div>
                     </div>
@@ -146,7 +144,7 @@ const Footer = () => {
                 <div className="border-t border-white/10 py-8">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} SYNCSCRIPT. All rights reserved. Made with ❤️ in INDIA.
+                            © {new Date().getFullYear()} WhisperSync. All rights reserved. Made with ❤️ in INDIA.
                         </p>
                         
                         <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -154,7 +152,7 @@ const Footer = () => {
                             <span>•</span>
                             <span>Built for Creators</span>
                             <span>•</span>
-                            <span>Trusted by 10K+ users</span>
+                            <span>Open Source</span>
                         </div>
                     </div>
                 </div>

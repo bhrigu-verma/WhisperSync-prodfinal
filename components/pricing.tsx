@@ -7,20 +7,22 @@ const pricingPlans = [
     name: 'Free',
     price: '0',
     features: [
-      'Up to 2 videos per month',
+      'Up to 3 videos per month',
       'Basic transcription accuracy',
-      'Standard support',
+      'SRT & ASS export',
+      'Community support',
     ],
   },
   {
     name: 'Pro',
-    price: '10',
+    price: '12',
     features: [
-      'Up to 50 videos per month',
+      'Up to 30 videos per month',
       'Enhanced accuracy',
-      'Change color of text',
-      'Get Transcription file',
-      'Edit Transcripiom',
+      'Custom caption styles',
+      'Download transcription files',
+      'Edit transcriptions inline',
+      'Priority support',
     ],
     popular: true,
   },
@@ -30,9 +32,10 @@ const pricingPlans = [
     features: [
       'Unlimited videos',
       'Highest accuracy',
-      '24/7 support',
+      '24/7 dedicated support',
       'API access',
-      'Custom integration'
+      'Custom integrations',
+      'Team workspace',
     ],
   },
 ];

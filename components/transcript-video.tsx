@@ -248,28 +248,28 @@ Style: Hindi,Noto Sans Devanagari,${fontSize},&H00FFFFFF,&H000000FF,&H00000000,&
             <div className="flex flex-col gap-y-4">
                 <div>
                     {/* Language detection display */}
-                    <div className="flex justify-between mb-4 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border">
-                        <div className="font-bold text-gray-700">
+                    <div className="flex justify-between mb-4 p-3 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg border border-white/10">
+                        <div className="font-bold text-neutral-300">
                             Detected Language:
                         </div>
-                        <div className="font-bold text-blue-600">
+                        <div className="font-bold text-blue-400">
                             {getLanguageDisplay()}
                         </div>
                     </div>
                     
                     {/* Transcription count display */}
-                    <div className="flex justify-between mb-4 p-2 bg-gray-50 rounded">
-                        <div className="font-semibold text-gray-700">
+                    <div className="flex justify-between mb-4 p-2 bg-white/5 rounded-lg border border-white/5">
+                        <div className="font-semibold text-neutral-300">
                             Subtitle Segments:
                         </div>
-                        <div className="font-bold text-green-600">
+                        <div className="font-bold text-green-400">
                             {transcriptions.length}
                         </div>
                     </div>
                     
                     {/* Font Size Control */}
-                    <div className="flex justify-between mb-4 p-2 bg-gray-50 rounded">
-                        <div className="font-semibold text-gray-700">
+                    <div className="flex justify-between mb-4 p-2 bg-white/5 rounded-lg border border-white/5">
+                        <div className="font-semibold text-neutral-300">
                             Font Size:
                         </div>
                         <div className="flex items-center gap-2">
@@ -279,34 +279,34 @@ Style: Hindi,Noto Sans Devanagari,${fontSize},&H00FFFFFF,&H000000FF,&H00000000,&
                                 max="100"
                                 value={fontSize}
                                 onChange={(ev) => setFontSize(parseInt(ev.target.value))}
-                                className="w-24"
+                                className="w-24 accent-yellow-400"
                             />
-                            <span className="text-sm font-medium w-8">{fontSize}px</span>
+                            <span className="text-sm font-medium text-neutral-300 w-8">{fontSize}px</span>
                         </div>
                     </div>
                     
                     {/* Color Controls */}
-                    <div className="flex justify-between mb-2 p-2 bg-gray-50 rounded">
-                        <div className="font-semibold text-gray-700">
+                    <div className="flex justify-between mb-2 p-2 bg-white/5 rounded-lg border border-white/5">
+                        <div className="font-semibold text-neutral-300">
                             Text Color:
                         </div>
                         <input 
                             type="color"
                             value={primaryColor}
                             onChange={(ev) => setPrimaryColor(ev.target.value)}
-                            className="w-10 h-8 rounded border"
+                            className="w-10 h-8 rounded border border-white/10 bg-transparent cursor-pointer"
                         />
                     </div>
                     
-                    <div className="flex justify-between mb-4 p-2 bg-gray-50 rounded">
-                        <div className="font-semibold text-gray-700">
+                    <div className="flex justify-between mb-4 p-2 bg-white/5 rounded-lg border border-white/5">
+                        <div className="font-semibold text-neutral-300">
                             Outline Color:
                         </div>
                         <input 
                             type="color"
                             value={outlineColor}
                             onChange={(ev) => setOutlineColor(ev.target.value)}
-                            className="w-10 h-8 rounded border"
+                            className="w-10 h-8 rounded border border-white/10 bg-transparent cursor-pointer"
                         />
                     </div>
                 </div>

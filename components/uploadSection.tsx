@@ -9,7 +9,6 @@ import { toast } from "react-hot-toast";
 import useLoadingStore from "@/store/loading-store";
 import { StoreTranscription } from "@/actions/StoreTranscriptionFile";
 import useModalStore from "@/store/modal-store";
-import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 
 
@@ -104,16 +103,15 @@ const UploadSection = () => {
 
   return (
   
-  <div className="relative max-w-3xl mx-auto mt-8">
-  <CardSpotlight className="h-96 w-96">
-    <label className="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-gradient-to-br from-sand-500 via-orange-300 to-yellow-400 hover:scale-105 hover:bg-opacity-90 shadow-xl transition-all duration-300 transform hover:rotate-2">
+  <div id="upload" className="relative max-w-2xl mx-auto mt-8 px-4">
+    <label className="flex flex-col items-center justify-center w-full h-56 sm:h-64 rounded-2xl cursor-pointer border-2 border-dashed border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-300">
       <div className="flex flex-col items-center justify-center pt-6 pb-8 space-y-3">
-        <UploadCloud className="w-16 h-16 text-white mb-4 animate-pulse" />
-        <p className="text-lg font-semibold text-white drop-shadow-md">
-          <span className="underline">Click to upload</span> or drag and drop
+        <UploadCloud className="w-12 h-12 text-yellow-400 mb-2" />
+        <p className="text-base font-semibold text-white">
+          <span className="underline decoration-yellow-400/50">Click to upload</span> or drag and drop
         </p>
-        <p className="text-xs text-white opacity-90">
-          MP4 up to 500MB
+        <p className="text-xs text-neutral-400">
+          MP4 up to 500MB • Optimized for short-form video
         </p>
       </div>
       <input
@@ -123,9 +121,7 @@ const UploadSection = () => {
         onChange={upload}
       />
     </label>
-  </CardSpotlight>
-  
-</div>
+  </div>
 
     
   );
